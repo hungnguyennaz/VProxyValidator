@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
 
+# Output files
+target
+*.iml
+
 # Log file
 *.log
 
@@ -9,6 +13,9 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# JetBrains IDE Files
+.idea
 
 # Package Files #
 *.jar

@@ -13,7 +13,6 @@ public class ConnectionListener implements Listener {
     public ConnectionListener(VProxyValidatorBungeePlugin plugin) {
         this.plugin = plugin;
     }
-
     @EventHandler
     public void onClientConnect(ClientConnectEvent event) {
         ListenerInfo listenerInfo = event.getListener();
@@ -22,10 +21,10 @@ public class ConnectionListener implements Listener {
             String ip = inet.getAddress().getHostAddress();
             if (!isAllowedIP(ip)) {
                 event.setCancelled(true);
+                plugin.getLogger().info("§cĐã chặn kết nối từ IP " + ip + " vì nó không thuộc hệ thống của VietProtect.");
             }
         }
     }
-
     private boolean isAllowedIP(String ipAddress) {
         List<String> allowedIPs = plugin.getAllowedIPs();
         for (String allowedIP : allowedIPs) {

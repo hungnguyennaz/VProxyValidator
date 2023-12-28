@@ -1,3 +1,4 @@
 name: VProxyValidatorBungee
 version: '${project.version}'
 main: me.hungaz.vproxyvalidator.VProxyValidatorBungeePlugin
+author: hungaz
